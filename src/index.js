@@ -1,8 +1,16 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import { View } from 'react-native';
+import { StatusBar } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 
+import Router from './routes';
 // import { Container } from './styles';
 
 export default function src() {
-  return <View />;
+  return (
+    <NavigationContainer>
+      <StatusBar />
+      <Router />
+    </NavigationContainer>
+  );
 }
