@@ -17,9 +17,9 @@ export const CardBox = styled.View`
 `;
 
 export const UserImage = styled.Image`
-  height: 80px;
-  width: 80px;
-  border-radius: 40px;
+  height: 90px;
+  width: 90px;
+  border-radius: 45px;
 `;
 
 export const UserName = styled.Text`

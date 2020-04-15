@@ -65,22 +65,22 @@
     {
       "id": 1,
       "name": "Tecnologia",
-      "image": "http://www.thecolorapi.com/id?format=svg&named=false&hex=DECE44"
+      "image": "https://images.pexels.com/photos/4065621/pexels-photo-4065621.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
     },
     {
       "id": 2,
       "name": "Saúde",
-      "image": "http://www.thecolorapi.com/id?format=svg&named=false&hex=DECE63"
+      "image": "https://images.pexels.com/photos/2294353/pexels-photo-2294353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
     },
     {
       "id": 3,
       "name": "Animais",
-      "image": "http://www.thecolorapi.com/id?format=svg&named=false&hex=DECE65"
+      "image": "https://images.pexels.com/photos/1485799/pexels-photo-1485799.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
     },
     {
       "id": 4,
       "name": "Artes",
-      "image": "http://www.thecolorapi.com/id?format=svg&named=false&hex=DECE64"
+      "image": "https://images.pexels.com/photos/1340502/pexels-photo-1340502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
     }
   ]
 }

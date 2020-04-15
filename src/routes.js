@@ -15,7 +15,7 @@ export default function Router() {
   return (
     <Tabs.Navigator
       tabBarOptions={{
-        activeTintColor: '#333',
+        activeTintColor: '#1f33c9',
         inactiveTintColor: '#999',
         style: {
           backgroundColor: '#fff',
@@ -29,6 +29,16 @@ export default function Router() {
           tabBarLabel: 'Home',
           tabBarIcon: ({ color }) => (
             <Icon name="home" size={24} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Search"
+        component={Home}
+        options={{
+          tabBarLabel: 'Search',
+          tabBarIcon: ({ color }) => (
+            <Icon name="place" size={24} color={color} />
           ),
         }}
       />
