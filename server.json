@@ -1,0 +1,86 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "João",
+      "avatar": "https://api.adorable.io/avatars/server.png",
+      "title": "Desenvolvedor Front-End",
+      "categorie_id": 1,
+      "rate": 20,
+      "latitude": 22.223344,
+      "longitude": 22.223344
+    },
+    {
+      "id": 2,
+      "name": "Fernanda",
+      "avatar": "https://api.adorable.io/avatars/server.png",
+      "title": "Designer",
+      "categorie_id": 1,
+      "rate": 20,
+      "latitude": 22.223344,
+      "longitude": 22.223344
+    },
+    {
+      "id": 3,
+      "name": "Juliana",
+      "avatar": "https://api.adorable.io/avatars/server.png",
+      "title": "Professora de Yoga",
+      "categorie_id": 2,
+      "rate": 15,
+      "latitude": 22.223344,
+      "longitude": 22.223344
+    },
+    {
+      "id": 4,
+      "name": "Lucas",
+      "avatar": "https://api.adorable.io/avatars/server.png",
+      "title": "Pet Walker",
+      "categorie_id": 3,
+      "rate": 12,
+      "latitude": 22.223344,
+      "longitude": 22.223344
+    },
+    {
+      "id": 5,
+      "name": "Maria",
+      "avatar": "https://api.adorable.io/avatars/server.png",
+      "title": "Artista plástica",
+      "categorie_id": 4,
+      "rate": 20,
+      "latitude": 22.223344,
+      "longitude": 22.223344
+    },
+    {
+      "id": 6,
+      "name": "Enrick",
+      "avatar": "https://api.adorable.io/avatars/server.png",
+      "title": "Adestrador",
+      "categorie_id": 3,
+      "rate": 20,
+      "latitude": 22.223344,
+      "longitude": 22.223344
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Tecnologia",
+      "image": "http://www.thecolorapi.com/id?format=svg&named=false&hex=DECE44"
+    },
+    {
+      "id": 2,
+      "name": "Saúde",
+      "image": "http://www.thecolorapi.com/id?format=svg&named=false&hex=DECE63"
+    },
+    {
+      "id": 3,
+      "name": "Animais",
+      "image": "http://www.thecolorapi.com/id?format=svg&named=false&hex=DECE65"
+    },
+    {
+      "id": 4,
+      "name": "Artes",
+      "image": "http://www.thecolorapi.com/id?format=svg&named=false&hex=DECE64"
+    }
+  ]
+}

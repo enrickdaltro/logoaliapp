@@ -15,13 +15,15 @@ export const Title = styled.Text`
 `;
 
 export const ProviderTitle = styled.Text`
-  font-size: 28px;
+  font-size: 24px;
 
   margin-top: 20px;
+  font-weight: 500;
 `;
 
 export const CategoriesTitle = styled.Text`
-  font-size: 28px;
+  font-size: 24px;
 
   margin-top: 20px;
+  font-weight: 500;
 `;

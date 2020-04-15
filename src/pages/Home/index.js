@@ -39,6 +39,7 @@ export default function Home() {
         <ProviderTitle>Últimos prestadores</ProviderTitle>
         <Card data={infos} />
         <CategoriesTitle>Categorias</CategoriesTitle>
+        <Card data={infos} />
       </Content>
     </Container>
   );
