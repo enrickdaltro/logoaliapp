@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Home from './pages/Home';
+import Search from './pages/Search';
 
 // const Stack = createStackNavigator();
 const Tabs = createBottomTabNavigator();
@@ -19,6 +20,7 @@ export default function Router() {
         inactiveTintColor: '#999',
         style: {
           backgroundColor: '#fff',
+          borderTopColor: 'transparent',
         },
         keyboardHidesTabBar: true,
       }}>
@@ -34,7 +36,7 @@ export default function Router() {
       />
       <Tabs.Screen
         name="Search"
-        component={Home}
+        component={Search}
         options={{
           tabBarLabel: 'Search',
           tabBarIcon: ({ color }) => (

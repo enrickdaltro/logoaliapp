@@ -7,8 +7,8 @@
       "title": "Desenvolvedor Front-End",
       "categorie_id": 1,
       "rate": 20,
-      "latitude": 22.223344,
-      "longitude": 22.223344
+      "latitude": -12.253508,
+      "longitude": -38.943953
     },
     {
       "id": 2,
@@ -17,8 +17,8 @@
       "title": "Designer",
       "categorie_id": 1,
       "rate": 20,
-      "latitude": 22.223344,
-      "longitude": 22.223344
+      "latitude": -12.253508,
+      "longitude": -38.983953
     },
     {
       "id": 3,
@@ -27,8 +27,8 @@
       "title": "Professora de Yoga",
       "categorie_id": 2,
       "rate": 15,
-      "latitude": 22.223344,
-      "longitude": 22.223344
+      "latitude": -12.253508,
+      "longitude": -38.913953
     },
     {
       "id": 4,
@@ -37,8 +37,8 @@
       "title": "Pet Walker",
       "categorie_id": 3,
       "rate": 12,
-      "latitude": 22.223344,
-      "longitude": 22.223344
+      "latitude": -12.253508,
+      "longitude": -12.253508
     },
     {
       "id": 5,
@@ -47,8 +47,8 @@
       "title": "Artista plástica",
       "categorie_id": 4,
       "rate": 20,
-      "latitude": 22.223344,
-      "longitude": 22.223344
+      "latitude": -12.253508,
+      "longitude": -12.253508
     },
     {
       "id": 6,
@@ -57,8 +57,8 @@
       "title": "Adestrador",
       "categorie_id": 3,
       "rate": 20,
-      "latitude": 22.223344,
-      "longitude": 22.223344
+      "latitude": -12.253508,
+      "longitude": -12.253508
     }
   ],
   "categories": [
