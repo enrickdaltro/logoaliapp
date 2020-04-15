@@ -8,6 +8,8 @@ import {
   UserImage,
   UserName,
   UserTitle,
+  ProfileButton,
+  ButtonText,
 } from './styles';
 
 export default function Card({ data }) {
@@ -23,7 +25,10 @@ export default function Card({ data }) {
             <CardBox>
               <UserImage source={{ uri: item.avatar }} />
               <UserName>{item.name}</UserName>
-              <UserTitle>{item.titulo}</UserTitle>
+              <UserTitle>{item.title}</UserTitle>
+              <ProfileButton>
+                <ButtonText>Ver perfil</ButtonText>
+              </ProfileButton>
             </CardBox>
           </CardList>
         )}

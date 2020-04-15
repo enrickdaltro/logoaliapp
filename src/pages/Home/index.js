@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { ActivityIndicator } from 'react-native';
 
 import Card from '../../components/Card';
+
+import api from '../../services/api';
 
 import {
   Container,
@@ -11,35 +14,27 @@ import {
 } from './styles';
 
 export default function Home() {
-  const [infos, setInfos] = useState([
-    {
-      id: 1,
-      name: 'Enrick',
-      titulo: 'desenvolvedor',
-      avatar: 'https://api.adorable.io/avatars/app.png',
-    },
-    {
-      id: 2,
-      name: 'Enrick 2',
-      titulo: 'desenvolvedor 2sasasasas',
-      avatar: 'https://api.adorable.io/avatars/app.png',
-    },
-    {
-      id: 3,
-      name: 'Enrick 3',
-      titulo: 'desenvolvedor 3',
-      avatar: 'https://api.adorable.io/avatars/app.png',
-    },
-  ]);
+  const [infos, setInfos] = useState([]);
+
+  useEffect(() => {
+    async function getData() {
+      const response = await api.get('/users');
+
+      setInfos(response.data);
+    }
+
+    getData();
+  }, []);
   return (
     <Container>
       <Content>
         <Title>Olá!</Title>
 
         <ProviderTitle>Últimos prestadores</ProviderTitle>
+
         <Card data={infos} />
+
         <CategoriesTitle>Categorias</CategoriesTitle>
-        <Card data={infos} />
       </Content>
     </Container>
   );
