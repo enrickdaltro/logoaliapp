@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, ActivityIndicator, StyleSheet } from 'react-native';
 
-import MapView, { Marker } from 'react-native-maps';
+import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
 
 import api from '../../services/api';
@@ -71,6 +71,7 @@ export default function Search() {
         <ActivityIndicator size="large" />
       ) : (
         <MapView
+          provider={PROVIDER_GOOGLE}
           initialRegion={{
             latitude: coordinates.latitude,
             longitude: coordinates.longitude,
