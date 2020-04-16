@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
 export default function Search() {
   const [loading, setLoading] = useState(true);
   const [coordinates, setCoordinates] = useState({});
+  const [points, setPoints] = useState([]);
 
   useEffect(() => {
     Geolocation.getCurrentPosition(
@@ -30,11 +31,39 @@ export default function Search() {
         setLoading(false);
       },
       error => {
-        console.log(error);
+        console.tron.log(error);
       },
       { enableHighAccuracy: true, maximumAge: 10000, timeout: 10000 },
     );
   }, []);
+
+  useEffect(() => {
+    async function getData() {
+      try {
+        const { data } = await api.get('/points', {
+          params: coordinates,
+        });
+        setPoints(data);
+      } catch (error) {
+        console.tron.log(error);
+      }
+    }
+
+    if (coordinates) getData();
+  }, [coordinates]);
+
+  function renderPoints() {
+    return points.map(point => (
+      <Marker
+        key={point.id}
+        coordinate={{
+          latitude: parseFloat(point.latitude),
+          longitude: parseFloat(point.longitude),
+        }}
+        title={point.name}
+      />
+    ));
+  }
 
   return (
     <View style={styles.container}>
@@ -48,8 +77,9 @@ export default function Search() {
             latitudeDelta: 0.0068,
             longitudeDelta: 0.0068,
           }}
-          style={styles.map}
-        />
+          style={styles.map}>
+          {renderPoints()}
+        </MapView>
       )}
     </View>
   );
