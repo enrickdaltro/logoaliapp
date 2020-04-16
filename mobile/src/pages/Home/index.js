@@ -15,20 +15,23 @@ import {
 } from './styles';
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
   const [infos, setInfos] = useState([]);
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     async function getData() {
-      const response = await api.get('/users');
+      const response = await api.get('/points');
 
       setInfos(response.data);
+      setLoading(false);
     }
 
     async function getCategories() {
       const response = await api.get('/categories');
 
       setCategories(response.data);
+      setLoading(false);
     }
 
     getData();
@@ -40,10 +43,20 @@ export default function Home() {
         <Title>Olá!</Title>
 
         <ProviderTitle>Últimos prestadores</ProviderTitle>
-        <Card data={infos} />
+
+        {loading ? (
+          <ActivityIndicator size="large" margin={10} />
+        ) : (
+          <Card data={infos} />
+        )}
 
         <CategoriesTitle>Categorias</CategoriesTitle>
-        <CardCategories data={categories} />
+
+        {loading ? (
+          <ActivityIndicator size="large" margin={10} />
+        ) : (
+          <CardCategories data={categories} />
+        )}
       </Content>
     </Container>
   );
