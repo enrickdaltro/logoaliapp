@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { View, ActivityIndicator, StyleSheet } from 'react-native';
+import { View, ActivityIndicator, StyleSheet, Image, Text } from 'react-native';
 
-import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
+import MapView, { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
 
 import api from '../../services/api';
@@ -16,6 +18,33 @@ const styles = StyleSheet.create({
 
   map: {
     ...StyleSheet.absoluteFillObject,
+  },
+
+  modal: {
+    height: 100,
+    width: 170,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 5,
+  },
+
+  avatar: {
+    height: 40,
+    width: 40,
+    borderRadius: 20,
+    marginBottom: 10,
+  },
+
+  name: {
+    fontSize: 16,
+    fontWeight: '500',
+    marginBottom: 5,
+  },
+
+  title: {
+    fontSize: 12,
+    color: '#666',
+    marginBottom: 5,
   },
 });
 
@@ -60,8 +89,17 @@ export default function Search() {
           latitude: parseFloat(point.latitude),
           longitude: parseFloat(point.longitude),
         }}
-        title={point.name}
-      />
+        title={point.name}>
+        <Callout>
+          <View style={styles.modal}>
+            <Image source={{ uri: point.avatar }} style={styles.avatar} />
+            <Text style={styles.name}>{point.name}</Text>
+            <Text style={styles.title}>{point.title}</Text>
+          </View>
+        </Callout>
+
+        <Icon name="place" color="#000" size={60} />
+      </Marker>
     ));
   }
 
