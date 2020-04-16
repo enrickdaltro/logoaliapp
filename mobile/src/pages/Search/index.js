@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function Search() {
+export default function Search({ navigation }) {
   const [loading, setLoading] = useState(true);
   const [coordinates, setCoordinates] = useState({});
   const [points, setPoints] = useState([]);
@@ -90,7 +90,7 @@ export default function Search() {
           longitude: parseFloat(point.longitude),
         }}
         title={point.name}>
-        <Callout>
+        <Callout onPress={() => navigation.navigate('ProfileInfo', { point })}>
           <View style={styles.modal}>
             <Image source={{ uri: point.avatar }} style={styles.avatar} />
             <Text style={styles.name}>{point.name}</Text>
