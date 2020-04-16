@@ -7,6 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './pages/Home';
 import Search from './pages/Search';
 import ProfileInfo from './pages/ProfileInfo';
+import ProfileHomeInfo from './pages/ProfileHomeInfo';
 
 const Stack = createStackNavigator();
 const Tabs = createBottomTabNavigator();
@@ -39,6 +40,32 @@ const searchStack = () => {
   );
 };
 
+const homeStack = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{
+          headerTransparent: true,
+          headerTitle: null,
+        }}
+      />
+      <Stack.Screen
+        name="ProfileHomeInfo"
+        component={ProfileHomeInfo}
+        options={{
+          headerTitle: 'Informações do prestador',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+          headerBackTitleVisible: false,
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
+
 export default function Router() {
   return (
     <Tabs.Navigator
@@ -52,8 +79,8 @@ export default function Router() {
         keyboardHidesTabBar: true,
       }}>
       <Tabs.Screen
-        name="Home"
-        component={Home}
+        name="HomePage"
+        component={homeStack}
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color }) => (

@@ -12,7 +12,11 @@ import {
   ButtonText,
 } from './styles';
 
-export default function Card({ data }) {
+export default function Card({ data, navigation }) {
+  function handleProfileInfo(item) {
+    navigation.navigate('ProfileHomeInfo', { item });
+  }
+
   return (
     <Container>
       <FlatList
@@ -26,7 +30,7 @@ export default function Card({ data }) {
               <UserImage source={{ uri: item.avatar }} />
               <UserName>{item.name}</UserName>
               <UserTitle>{item.title}</UserTitle>
-              <ProfileButton>
+              <ProfileButton onPress={() => handleProfileInfo(item)}>
                 <ButtonText>Ver perfil</ButtonText>
               </ProfileButton>
             </CardBox>

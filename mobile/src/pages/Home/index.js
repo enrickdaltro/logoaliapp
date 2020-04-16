@@ -14,7 +14,7 @@ import {
   CategoriesTitle,
 } from './styles';
 
-export default function Home() {
+export default function Home({ navigation }) {
   const [loading, setLoading] = useState(true);
   const [infos, setInfos] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -47,7 +47,7 @@ export default function Home() {
         {loading ? (
           <ActivityIndicator size="large" margin={10} />
         ) : (
-          <Card data={infos} />
+          <Card data={infos} navigation={navigation} />
         )}
 
         <CategoriesTitle>Categorias</CategoriesTitle>
