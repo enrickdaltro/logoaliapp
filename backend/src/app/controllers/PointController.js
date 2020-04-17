@@ -30,6 +30,27 @@ class PointController {
 
     return response.json(users);
   }
+
+  async show(request, response) {
+    const { latitude, longitude } = request.query;
+    const { id } = request.params;
+
+    const haversine = `(6371 * acos(cos(radians(${latitude}))
+         * cos(radians(latitude))
+         * cos(radians(longitude)
+         - radians(${longitude}))
+         + sin(radians(${latitude}))
+         * sin(radians(latitude))))`;
+
+    const points = await Point.findAll({
+      where: where(literal(haversine), "<=", 10),
+      where: {
+        categorie_id: id
+      }
+    });
+
+    return response.json(points);
+  }
 }
 
 module.exports = new PointController();

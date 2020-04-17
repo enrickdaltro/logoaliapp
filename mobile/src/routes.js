@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Search from './pages/Search';
 import ProfileInfo from './pages/ProfileInfo';
 import ProfileHomeInfo from './pages/ProfileHomeInfo';
+import CategoriesSearch from './pages/CategoriesSearch';
 
 const Stack = createStackNavigator();
 const Tabs = createBottomTabNavigator();
@@ -59,6 +60,15 @@ const homeStack = () => {
           headerTitleStyle: {
             fontWeight: 'bold',
           },
+          headerBackTitleVisible: false,
+        }}
+      />
+      <Stack.Screen
+        name="CategoriesSearch"
+        component={CategoriesSearch}
+        options={{
+          headerTransparent: true,
+          headerTitle: null,
           headerBackTitleVisible: false,
         }}
       />

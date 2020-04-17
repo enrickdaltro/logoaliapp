@@ -3,7 +3,7 @@ import { FlatList } from 'react-native';
 
 import { Container, CardList, CardBox, CardImage, CardTitle } from './styles';
 
-export default function CardCategories({ data }) {
+export default function CardCategories({ data, navigation }) {
   return (
     <Container>
       <FlatList
@@ -13,7 +13,8 @@ export default function CardCategories({ data }) {
         keyExtractor={item => String(item.id)}
         renderItem={({ item }) => (
           <CardList>
-            <CardBox>
+            <CardBox
+              onPress={() => navigation.navigate('CategoriesSearch', { item })}>
               <CardImage source={{ uri: item.image }} />
               <CardTitle>{item.name}</CardTitle>
             </CardBox>

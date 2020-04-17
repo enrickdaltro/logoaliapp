@@ -55,7 +55,7 @@ export default function Home({ navigation }) {
         {loading ? (
           <ActivityIndicator size="large" margin={10} />
         ) : (
-          <CardCategories data={categories} />
+          <CardCategories data={categories} navigation={navigation} />
         )}
       </Content>
     </Container>

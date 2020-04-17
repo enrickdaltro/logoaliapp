@@ -6,7 +6,7 @@ export const Container = styled.View`
 
 export const CardList = styled.View``;
 
-export const CardBox = styled.View`
+export const CardBox = styled.TouchableOpacity`
   width: 180px;
 
   border: 2px solid #eee;
