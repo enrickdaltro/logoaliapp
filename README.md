@@ -14,6 +14,7 @@ Em ambas as páginas você pode clicar nos usuários para ter mais detalhes ou, 
 
 * React-Native CLI
 * react-native-maps
+* react-native-geolocation
 * React-Navigation
 * Axios
 * styled-components
